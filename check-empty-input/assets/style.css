@@ -1,8 +1,16 @@
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 28px;
 }
 
 form {
@@ -33,7 +41,7 @@ form input:focus {
 }
 
 form input:focus + label,
-form input:not(:placeholder-shown) {
+form input:not(:placeholder-shown) + label {
   top: -10px;
   left: 12px;
   color: skyblue;
@@ -41,10 +49,29 @@ form input:not(:placeholder-shown) {
   padding: 0 4px;
 }
 
-form input:valid {
-  outline-color: greenyellow;
+form input:not(:focus):not(:placeholder-shown) + label {
+  color: #777;
 }
 
-form input:valid + label {
+form input:valid {
+  outline-style: solid;
+  outline-color: greenyellow;
+  outline-width: 2px;
+  outline-offset: 1px;
+}
+
+form input:valid:focus + label,
+form input:valid:not(:focus):not(:placeholder-shown) + label {
   color: greenyellow;
+}
+
+form input:invalid:not(:placeholder-shown) {
+  outline-style: solid;
+  outline-color: red;
+  outline-width: 2px;
+  outline-offset: 1px;
+}
+
+form input:invalid:not(:placeholder-shown) + label {
+  color: red;
 }
