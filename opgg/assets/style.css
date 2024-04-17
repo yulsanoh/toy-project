@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Pretendard-Regular", sans-serif;
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main,
+form,
+.login__email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__email h2 {
+  font-size: 36px;
+}
+
+.login__email p {
+  margin: 24px 0px 28px 0px;
+  width: 320px;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: rgb(68, 81, 92);
+}
+
+.login__email form {
+  position: relative;
+}
+
+.login__email form label {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  pointer-events: none;
+  color: rgb(195, 203, 209);
+  transition: 0.3s;
+}
+
+.login__email form input[type="email"] {
+  padding: 12px 16px;
+  width: 320px;
+  border: 1px solid rgb(195, 203, 209);
+  border-radius: 5px;
+  margin-bottom: 24px;
+}
+
+.login__email form input[type="email"]:focus {
+  outline: solid rgb(126, 172, 255);
+  outline-offset: 1px;
+  outline-width: 1.6px;
+}
+
+.login__email form input[type="email"]:focus ~ label {
+  top: -8px;
+  left: 12px;
+  font-size: 13px;
+  color: rgb(126, 172, 255);
+  background-color: #fff;
+  padding: 0 4px;
+}
+
+.login__email a {
+  margin-top: 16px;
+}
